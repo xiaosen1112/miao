@@ -1,0 +1,33 @@
+.f {
+  color:red
+}
+
+.a:hover {
+  color: red;
+}
+.a:active {
+  color: green;
+}
+.a:focus {
+  color:blue
+}
+
+.red {
+  color: red;
+}
+.green{
+  color: green;
+}
+.blue {
+  color: blue;
+}
+
+.m {
+  color: red;
+}
+.n  {
+  color: green;
+}
+.b {
+  color: blue;
+}
