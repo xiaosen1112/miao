@@ -2,14 +2,14 @@
   color:red
 }
 
+.a:focus {
+  color:blue
+}
 .a:hover {
   color: red;
 }
 .a:active {
   color: green;
-}
-.a:focus {
-  color:blue
 }
 
 .red {
