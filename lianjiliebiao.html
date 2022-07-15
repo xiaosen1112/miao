@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body div{
+      border:1px solid;
+      width: 100px;
+      height: 30px;
+      box-sizing: border-box;
+      text-align: center;
+      line-height: 25px;
+    }
+    div{
+      position: relative;
+      display: inline-block;
+    }
+    ul{
+      list-style: none;
+      display: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      white-space: nowrap;
+      background-color: rgb(38, 38, 30);
+      color: white;
+      text-align: center;
+    }
+    div:hover >ul{
+      display: block;
+    }
+    ul li:hover{
+      background-color: rgb(14, 57, 93);
+    }
+  </style>
+</head>
+<body>
+<div>文件(F)
+  <ul>
+    <li>新建文件夹</li>
+    <li>新建文件</li>
+    <li>新建窗口</li>
+    <hr>
+    <li>打开文件</li>
+    <li>打开文件夹</li>
+    <li>从文件打开工作区</li>
+    <li>打开最近的文件</li>
+    <hr>
+    <li>将文件夹添加到工作区</li>
+    <li>将工作区另存为...</li>
+    <li>复制工作区</li>
+    <hr>
+    <li>保存</li>
+    <li>另存为</li>
+    <li>全部保存</li>
+    <hr>
+    <li>共享</li>
+    <hr>
+    <li>自动保存</li>
+    <li>首选项</li>
+    <hr>
+    <li>还原文件</li>
+    <li>关闭编辑器</li>
+    <li>关闭窗口</li>
+    <hr>
+    <li>退出</li>
+  </ul>
+</div>
+  <div>编辑(F)
+    <ul>
+      <li>撤销</li>
+      <li>恢复</li>
+      <hr>
+      <li>剪切</li>
+      <li>复制</li>
+      <li>粘贴</li>
+      <hr>
+      <li>查找</li>
+      <li>替换</li>
+      <hr>
+      <li>在文件中查找</li>
+      <li>在文件中替换</li>
+      <hr>
+      <li>切换行注释</li>
+      <li>切换块注释</li>
+      <li>Emmet:展开缩写</li>
+    </ul>
+  </div>
+  <div>选择(S)
+    <ul>
+      <li>全选</li>
+      <li>扩大选区</li>
+      <li>缩小选区</li>
+      <hr>
+      <li>向上复制一行</li>
+      <li>向下复制一行</li>
+      <li>向上复制一行</li>
+      <li>向下复制一行</li>
+      <li>重复选择</li>
+      <hr>
+      <li>在上面添加光标</li>
+      <li>在下面添加光标</li>
+      <li>在行尾添加光标</li>
+      <li>添加下一个匹配项</li>
+      <li>添加上一个匹配项</li>
+      <li>选择所有匹配项</li>
+      <hr>
+      <li>切换为"Alt+单击"进行多光标功能</li>
+      <li>列选择模式</li>
+    </ul>
+  </div>
+  <div>查看(V)
+    <ul>
+      <li>命令面板</li>
+      <li>打开视图</li>
+      <hr>
+      <li>外观</li>
+      <li>编辑器布局</li>
+      <li>资源管理器</li>
+      <li>搜索</li>
+      <li>源代码管理</li>
+      <li>运行</li>
+      <li>扩展</li>
+      <hr>
+      <li>问题</li>
+      <li>输出</li>
+      <li>调试控制台</li>
+      <li>终端</li>
+      <hr>
+      <li>自动换行</li>
+      <li>显示缩略图</li>
+      <li>显示导航痕迹</li>
+      <li>显示空格</li>
+      <li>显示控制字符</li>
+    </ul>
+  </div>
+  <div>转到(G)
+    <ul>
+      <li>返回</li>
+      <li>前进</li>
+      <li>上次编辑位置</li>
+      <hr>
+      <li>切换编辑器</li>
+      <li>切换组</li>
+      <hr>
+      <li>转到文件</li>
+      <li>转到工作区中的符号</li>
+      <hr>
+      <li>转到编辑器中的符号</li>
+      <li>转到定义</li>
+      <li>转到类型定义</li>
+      <li>转到声明</li>
+      <li>转到实现</li>
+      <li>转到引用</li>
+      <hr>
+      <li>转到行/列</li>
+      <li>转到括号</li>
+      <hr>
+      <li>下一个问题</li>
+      <li>上一个问题</li>
+      <hr>
+      <li>下一个更改</li>
+      <li>上一个更改</li>
+    </ul>
+  </div>
+  <div>运行(R)
+    <ul>
+      <li>启动调试</li>
+      <li>以非调试模式运行</li>
+      <li>停止调试</li>
+      <li>重启调试</li>
+      <hr>
+      <li>打开配置</li>
+      <li>添加配置</li>
+      <hr>
+      <li>单步跳过</li>
+      <li>单步执行</li>
+      <li>单步停止</li>
+      <li>继续</li>
+      <hr>
+      <li>切换断点</li>
+      <li>新建断点</li>
+      <hr>
+      <li>启用所有断点</li>
+      <li>禁用所有断点</li>
+      <li>删除所有断点</li>
+      <hr>
+      <li>安装附加调试器...</li>
+    </ul>
+  </div>
+  <div>终端(T)
+    <ul>
+      <li>新建终端</li>
+      <li>拆分终端</li>
+      <hr>
+      <li>运行任务</li>
+      <li>运行生成任务</li>
+      <li>运行活动文本</li>
+      <li>运行所选文本</li>
+      <hr>
+      <li>显示正在运行的任务</li>
+      <li>重启正在运行的任务</li>
+      <li>终止任务</li>
+      <hr>
+      <li>配置任务</li>
+      <li>配置默认生成任务</li>
+    </ul>
+  </div>
+  <div>帮助(H)
+    <ul>
+      <li>开始</li>
+      <li>显示所有命令</li>
+      <li>编辑器操场</li>
+      <li>文档</li>
+      <li>发行说明</li>
+      <hr>
+      <li>键盘快捷方式参考</li>
+      <li>视频教程</li>
+      <li>贴士和技巧</li>
+      <hr>
+      <li>Twitter上和我们互动</li>
+      <li>搜索功能请求</li>
+      <li>使用英文报告问题</li>
+      <hr>
+      <li>查看许可证</li>
+      <li>隐私声明</li>
+      <hr>
+      <li>切换开发人员工具</li>
+      <li>打开进程管理器</li>
+      <hr>
+      <li>检查更新</li>
+      <hr>
+      <li>关于</li>
+    </ul>
+  </div>
+</body>
+</html>
