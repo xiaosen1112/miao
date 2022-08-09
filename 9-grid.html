@@ -24,6 +24,42 @@
         }
       }
     }
+    section{
+      display: flex;
+      flex-wrap: wrap;
+      width: 170px;
+      div{
+        width: 50px;
+      height: 50px;
+      border: 5px solid blue;
+      margin: 0px -5px -5px 0;
+      position: relative;
+      }
+      div:hover{
+        border: 5px solid red;
+        z-index: 8;
+      }
+    }
+    ul{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 170px;
+      overflow: hidden;
+      padding-bottom: 5px;
+      li{
+      width: 50px;
+      height: 50px;
+      border: 5px solid blue;
+      float: left;
+      margin: 0 -5px -5px 0;
+      position: relative;
+      }
+      li:hover{
+      border: 5px solid red;
+      z-index: 8;
+    }
+    }
   </style>
 </head0>
 <body>
@@ -49,6 +85,30 @@
       </tr>
     </tbody>
   </table>
+  <br>
+  <section>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+  </section>
+  <br>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+  </ul>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/less" ></script>
 </html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  .header{
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  transform-origin:100px 100px 100px;
+  margin: auto;
+  margin-top: 200px;
+}
+.all:hover{
+animation-play-state: paused;
+}
+.all{
+  width: 100%;
+  height: 100%;
+  transform: translateZ(-150px);
+  transform-style: preserve-3d;
+  animation: rotate 3s linear infinite;
+}
+
+.all div{
+  width:300px;
+  height:300px;
+  left:0;
+  right:0;
+  margin:auto;
+  position: absolute;
+}
+@keyframes rotate {
+    from {
+        transform: rotateX(0) rotateY(0);
+    }
+    to {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+.first{
+  background-color:red;
+  transform: translateZ(150px);
+}
+.second{
+  background-color:orange;
+  transform: translateZ(-150px);
+}
+.third{
+  background-color:yellow;
+  transform: rotateY(90deg) translateZ(150px) ;
+}
+.fouth{
+  background-color:green;
+  transform: rotateY(90deg) translateZ(-150px);
+}
+.five{
+  background-color:cyan;
+  transform: rotateX(90deg) translateZ(-150px);
+}
+.sixth{
+  background-color:blue;
+  transform: rotateX(90deg) translateZ(150px);
+}
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="all">
+      <div class="first"></div>
+      <div class="second"></div>
+      <div class="third"></div>
+      <div class="fouth"></div>
+      <div class="five"></div>
+      <div class="sixth"></div>
+    </div>
+  </div>
+</body>
+</html>
