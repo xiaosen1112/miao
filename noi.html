@@ -81,8 +81,11 @@ console.log(v.toFixed(2))
 </script>
 <script type="x" id="ch0103/13">
 var a = Number(prompt())
-var b =
-console.log(b)
+var b = a % 10
+var c = (a - b) / 10 % 10
+var d = (a - b * 10) / 100 % 10
+var q = ""  + b + c + d
+console.log(q)
 </script>
 <script type="x" id="ch0103/14">
 var h = Number(prompt())
@@ -94,8 +97,9 @@ console.log(Math.ceil(d))
 var n = Number(prompt())
 var x = Number(prompt())
 var y = Number(prompt())
-var d = n - (x * (n - y))
-console.log(Math.floor(d))
+var e = Math.ceil(y / x)
+var d = n - (e)
+console.log(d)
 </script>
 <script type="x" id="ch0103/16">
 var Xa = Number(prompt())
@@ -116,8 +120,8 @@ var a =Math.sqrt((x1-x2) ** 2 + (y1 - y2) ** 2)
 var b =Math.sqrt((x1-x3) ** 2 + (y1 - y3) ** 2)
 var c =Math.sqrt((x2-x3) ** 2 + (y2 - y3) ** 2)
 var p =a + b + c
-var r =Math.sqrt((a+b+c) / 2)
-var s =Math.sqrt(p * ((p-a) * (p-b) * (p-c)))
+var r =(a+b+c) / 2
+var s =Math.sqrt(r * (r-a) * (r-b) * (r-c))
 console.log(s.toFixed(2))
 </script>
 <script type="x" id="ch0103/18">
