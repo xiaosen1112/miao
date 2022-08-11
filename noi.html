@@ -178,13 +178,12 @@ if(n % 2 == 0){
 }
 </script>
 <script type="x" id="0104/04">
-  var A = Number(prompt())
-  if(A % 2 == 0){
-  console.log('Yes')
+  var A = prompt()
+  var B = A.charCodeAt(0)
+  if(B % 2 == 0){
+  console.log('NO')
 }else
-  if(A % 2 !== 0){
-    console.log('No')
-  }
+    console.log('YES')
 </script>
 <script type="x" id="0104/05">
   var x = Number(prompt())
@@ -222,7 +221,7 @@ if(n % 2 == 0){
 </script>
 <script type="x" id="ch0104/08">
   var n = Number(prompt())
-  if(n % 3 == 0 && n % 5 == 0){
+  if (n % 3 == 0 && n % 5 == 0){
     console.log('Yes')
   }else
   console.log('No')
@@ -236,24 +235,24 @@ if(d % 3 == 0 && d % 5 == 0 && d % 7 == 0){
     console.log('3 5')
   }else{
     if(d % 3 == 0 && d % 7 == 0){
-      console.log('3 7')
+    console.log('3 7')
     }else{
-      if(d % 5 == 0 && d % 7 == 0){
-        console.log('5 7')
-      }else{
-        if(d % 3 == 0){
-          console.log('3')
-        }else{
-          if(d % 5 == 0){
-            console.log('5')
-          }else{
-            if(d % 7 == 0){
-              console.log('7')
-            }else
-            console.log('n')
-          }
-        }
-      }
+    if(d % 5 == 0 && d % 7 == 0){
+    console.log('5 7')
+    }else{
+    if(d % 3 == 0){
+    console.log('3')
+    }else{
+    if(d % 5 == 0){
+    console.log('5')
+    }else{
+    if(d % 7 == 0){
+    console.log('7')
+    }else
+    console.log('n')
+    }
+    }
+    }
     }
   }
 }
@@ -407,29 +406,29 @@ if(d % 3 == 0 && d % 5 == 0 && d % 7 == 0){
   if(a && b && c == '+'){
     console.log(d)
   }else{
-    if(a && b && c == '-'){
-      console.log(e)
-    }else{
-      if(a && b && c == '*'){
-        console.log(f)
-      }else{
-        if(a && b && c == '/'){
-          console.log(j)
-        }else{
-          if(a == 0 && b && c == '/' ){
-            console.log('Divided by zero!')
-          }else{
-            if(a && b && c !== '+' ){
-              console.log('Invalid operator')
-            }else{
-              if(a && b && c !== '-' ){
-              console.log('Invalid operator')
-            }else{
-              if(a && b && c !== '*' ){
-              console.log('Invalid operator')
-              }else{
-                if(a && b && c !== '/' ){
-                console.log('Invalid operator')
+  if(a && b && c == '-'){
+    console.log(e)
+  }else{
+  if(a && b && c == '*'){
+  console.log(f)
+  }else{
+  if(a && b && c == '/'){
+  console.log(j)
+  }else{
+  if(a == 0 && b && c == '/' ){
+  console.log('Divided by zero!')
+  }else{
+  if(a && b && c !== '+' ){
+  console.log('Invalid operator')
+  }else{
+  if(a && b && c !== '-' ){
+  console.log('Invalid operator')
+  }else{
+  if(a && b && c !== '*' ){
+  console.log('Invalid operator')
+  }else{
+  if(a && b && c !== '/' ){
+  console.log('Invalid operator')
                 }
               }
             }
@@ -440,6 +439,30 @@ if(d % 3 == 0 && d % 5 == 0 && d % 7 == 0){
   }
   }
 </script>
-<script id="ch0104/20">
-  
+<script type="x" id="ch0104/20">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var c = Number(prompt())
+  var delta = b * b - 4 * a * c
+  var delta = b * b - 4 * a * c
+  if (delta >= 0) {
+    var x1 = (-b + Math.sqrt(delta)) / (2 * a)
+    var x2 = (-b - Math.sqrt(delta)) / (2 * a)
+    if (delta > 0) {
+      var result = 'x1=' + x1.toFixed(5) + ';x2=' + x2.toFixed(5)
+    } else {
+      var result = 'x1=x2=' + x1.toFixed(5)
+    }
+  } else {
+    delta = -delta
+    var sDelta = Math.sqrt(delta)
+    var x1real = -b / (2 * a)
+    var x1imag = sDelta / (2 * a)
+    var x2real = -b / (2 * a)
+    var x2imag = -sDelta / (2 * a)
+    var x1 = x1real.toFixed(5) + (x1imag > 0 ? '+' : '') + x1imag.toFixed(5) + 'i'
+    var x2 = x2real.toFixed(5) + (x2imag > 0 ? '+' : '') + x2imag.toFixed(5) + 'i'
+    var result = 'x1=' + x1 + ';x2=' + x2
+  }
+  console.log(result)
 </script>
