@@ -12,11 +12,10 @@ var r = (a + b) * c
 console.log(r);
 </script>
 <script type="x" id="ch0103/03">
-var a = Number(prompt())
-var b = Number(prompt())
-var c = Number(prompt())
-var r = (a + b) / c
-console.log(r.toFixed(0))
+  var a = +prompt()
+  var b = +prompt()
+  var c = +prompt()
+  console.log(Math.floor((a + b) / c))
 </script>
 <script type="x" id="ch0103/04">
 var a = Number(prompt())
@@ -33,11 +32,11 @@ var c = a / b
 console.log(c.toFixed(9))
 </script>
 <script type="x" id="ch0103/06">
-var a = Number(prompt())
-var b = Number(prompt())
-var c = a / b
-var d = c + '%'
-console.log(d)
+  var a = +prompt()
+  var d = +prompt()
+  var l = d / a
+  var i = l * 100
+  console.log(  i.toFixed(3) + '%'  )
 </script>
 <script type="x" id="ch0103/07">
 var x = Number(prompt())
@@ -102,12 +101,12 @@ var d = n - (e)
 console.log(d)
 </script>
 <script type="x" id="ch0103/16">
-var Xa = Number(prompt())
-var Ya = Number(prompt())
-var Xb = Number(prompt())
-var Yb = Number(prompt())
-var d = ((Xa - Xb) * (Xa - Xb) + (Ya - Yb) * (Ya - Yb))
-console.log(Math.sqrt(d.toFixed(3)))
+  var x1 = Number(prompt())
+  var y1 = Number(prompt())
+  var x2 = Number(prompt())
+  var y2 = Number(prompt())
+  var l =  Math.sqrt(    Math.pow((x1 - x2), 2) + (y1 - y2) * (y1 - y2)  )
+  console.log(l.toFixed(3))
 </script>
 <script type="x" id="ch0103/17">
 var x1 = Number(prompt())
@@ -466,6 +465,9 @@ if(d % 3 == 0 && d % 5 == 0 && d % 7 == 0){
   }
   console.log(result)
 </script>
+<script id="ch0104/21">
+
+</script>
 <script type="x" id="ch0105/01">
   var n = Number(prompt())
   var totalAge = 0
@@ -479,15 +481,14 @@ var average = totalAge / n
 console.log(average.toFixed(2))
 </script>
 <script type="x" id="ch0105/02">
-  var n = Number(prompt())
   var totalmoney = 0
   var counter = 1
-  while (counter <= n ) {
+  while (counter <= 12 ) {
     var money = Number(prompt('请输入第' + counter + '个月的金额'))
     totalmoney = totalmoney + money
     counter = counter + 1
   }
-  var d = totalmoney / n
+  var d = totalmoney / 12
   console.log('$' + d.toFixed(2))
 </script>
 <script type="x" id="ch0105/03">
@@ -503,17 +504,14 @@ console.log(average.toFixed(2))
   console.log(d.toFixed(4))
 </script>
 <script type="x" id="ch0105/04">
-debugger
   var n = Number(prompt())
-  var totaln = 0
-  var counter = 1
-  while (counter <= n ) {
-    var a = Number(prompt())
-    totaln = totaln + n
-    counter = couter + 1
+  var sum = 0
+  for (var i = 0; i < n; i = i + 1) {
+    var number = Number(prompt())
+    sum = sum + number
   }
-  var d = totaln / n
-  console.log(totaln, d.toFixed(5))
+  var average = sum / n
+  console.log(sum, average.toFixed(5))
 </script>
 <script type="x" id="ch0105/05">
   var n = Number(prompt())
@@ -530,18 +528,36 @@ debugger
 </script>
 <script type="x" id="ch0105/06">
   var n = Number(prompt())
-  var max = 0
-  var count = 0
-  while (count < n ){
-    var score = Number(prompt())
-    if ( score < max ){
-      max = score
+  var max = -Infinity
+  var min = Infinity
+  for (var i = 0; i < n; i = i + 1) {
+    var num = Number(prompt())
+    if (num > max) {
+      max = num
     }
-    count = count + 1
+    if (num < min) {
+      min = num
+    }
   }
-  console.log( max )
+  console.log(max - min)
 </script>
-<script id="ch0105/07">
-  var n = Number(prompt())
-  var count = 0
+<script type="x" id="ch0105/07">
+  var day = Number(prompt())
+  var Autotal = 0
+  var Agtotal = 0
+  var Cutotal = 0
+  for(var i = 0;i < day ;i = i + 1){
+    var Au = Number(prompt())
+    var Ag = Number(prompt())
+    var Cu = Number(prompt())
+    Autotal = Autotal + Au
+    Agtotal = Agtotal + Ag
+    Cutotal = Cutotal + Cu
+  }
+  console.log(
+    Autotal,
+    Agtotal,
+    Cutotal,
+    Autotal + Agtotal + Cutotal
+  )
 </script>
