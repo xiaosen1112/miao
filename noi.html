@@ -220,10 +220,11 @@ if(n % 2 == 0){
 </script>
 <script type="x" id="ch0104/08">
   var n = Number(prompt())
-  if (n % 3 == 0 && n % 5 == 0){
-    console.log('Yes')
-  }else
-  console.log('No')
+  if (n % 3 == 0 && n % 5 == 0) {
+    console.log('YES')
+  } else {
+    console.log("NO")
+  }
 </script>
 <script type="x" id="ch0104/09">
   var d = Number(prompt())
@@ -560,4 +561,108 @@ console.log(average.toFixed(2))
     Cutotal,
     Autotal + Agtotal + Cutotal
   )
+</script>
+<script type="x" id="ch0105/08">
+  var a = Number(prompt())
+  var target = (a - 2) * 180
+  for (var i = 1 ;i < a ;i = i + 1) {
+    var degree = Number(prompt())
+    target = target - degree
+  }
+  console.log(target)
+</script>
+<script type="x" id="ch0105/09">
+  var m = Number(prompt())
+  var n = Number(prompt())
+  var sum = 0
+  for (var number = m; number <= n; number = number + 1 ) {
+    if(number % 2 == 1){
+      sum = sum + number
+    }
+  }
+  console.log(sum)
+</script>
+<script type="x" id="ch0105/10">
+  var m = Number(prompt())
+  var n = Number(prompt())
+  var sum = 0
+  for(var number = m; number <= n;number = number + 1) {
+    if(number % 17 == 0) {
+      sum = sum + number
+    }
+  }
+  console.log(sum)
+</script>
+<script type="x" id="ch0105/11">
+  var k = Number(prompt())
+  var count1 = 0
+  var count5 = 0
+  var count10 = 0
+  for(var i = 0; i < k; i = i + 1) {
+    var num =Number(prompt())
+    if(num == 1 ) {
+      count1 = count1 + 1
+    }
+    if(num == 5 ) {
+      count5 = count5 + 1
+    }
+    if(num == 10) {
+      count10 = count10 + 1
+    }
+  }
+  console.log(count1,count5,count10)
+</script>
+<script type="x" id="ch0105/12">
+  var n = Number(prompt())
+  var m = Number(prompt())
+  var count = 0
+  for(var i = 1; i <= n;i = i + 1) {
+    var sum = Number(prompt())
+    if(sum == m) {
+      count = count + 1
+    }
+  }
+  console.log(count)
+</script>
+<script type="x" id="ch0105/13">
+  var a = Number(prompt())
+  var n = Number(prompt())
+  for(var i = 1;i <= n; i = i + 1 ) {
+    var d =  a ** n
+  }
+  console.log(d)
+</script>
+<script type="x" id="ch0105/14">
+  var x = Number(prompt())
+  var n = Number(prompt())
+  var count = 0
+  for(var i = 1; i <= n; i = i + 1) {
+    x = x * 1.001
+  }
+  console.log(x.toFixed(4))
+</script>
+<script type="x" id="ch0105/15">
+  var R = Number(prompt())
+  var M = Number(prompt())
+  var Y = Number(prompt())
+  var r = (1 + R / 100)
+  var count = 0
+  for(var i = 1;i <=Y; i = i + 1) {
+    M = M * r
+  }
+  console.log(Math.trunc(M))
+</script>
+<script id="ch0105/16">
+  var N = Number(prompt())
+  var K = Number(prompt())
+  var price = 200
+  var year = 20
+  var count = 0
+  for(var i = 1; i <= year;i = i + 1) {
+    N = N + price * K            
+    if(N > price + price * K) {
+
+    }
+  }
+  console.log(price + price * k / N)
 </script>
