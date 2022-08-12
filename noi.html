@@ -177,7 +177,7 @@ if(n % 2 == 0){
   }
 }
 </script>
-<script type="x" id="0104/04">
+<script type="x" id="ch0104/04">
   var A = prompt()
   var B = A.charCodeAt(0)
   if(B % 2 == 0){
@@ -185,7 +185,7 @@ if(n % 2 == 0){
 }else
     console.log('YES')
 </script>
-<script type="x" id="0104/05">
+<script type="x" id="ch0104/05">
   var x = Number(prompt())
   var y = Number(prompt())
   var a = x > y
@@ -465,4 +465,83 @@ if(d % 3 == 0 && d % 5 == 0 && d % 7 == 0){
     var result = 'x1=' + x1 + ';x2=' + x2
   }
   console.log(result)
+</script>
+<script type="x" id="ch0105/01">
+  var n = Number(prompt())
+  var totalAge = 0
+  var counter = 1
+  while(counter <= n){
+    var age = Number(prompt('请输入第' + counter + '个人的年龄：'))
+    totalAge = totalAge + age
+    counter = counter + 1
+  }
+var average = totalAge / n
+console.log(average.toFixed(2))
+</script>
+<script type="x" id="ch0105/02">
+  var n = Number(prompt())
+  var totalmoney = 0
+  var counter = 1
+  while (counter <= n ) {
+    var money = Number(prompt('请输入第' + counter + '个月的金额'))
+    totalmoney = totalmoney + money
+    counter = counter + 1
+  }
+  var d = totalmoney / n
+  console.log('$' + d.toFixed(2))
+</script>
+<script type="x" id="ch0105/03">
+  var n = Number(prompt())
+  var totaln = 0
+  var counter = 1
+  while (counter <= n ) {
+    var shu = Number(prompt('请输入第' + counter + '值'))
+    totaln = totaln + n
+    counter = counter + 1
+  }
+  var d = totaln / n
+  console.log(d.toFixed(4))
+</script>
+<script type="x" id="ch0105/04">
+debugger
+  var n = Number(prompt())
+  var totaln = 0
+  var counter = 1
+  while (counter <= n ) {
+    var a = Number(prompt())
+    totaln = totaln + n
+    counter = couter + 1
+  }
+  var d = totaln / n
+  console.log(totaln, d.toFixed(5))
+</script>
+<script type="x" id="ch0105/05">
+  var n = Number(prompt())
+  var max = 0
+  var count = 0
+  while (count < n){
+    var score = Number(prompt())
+    if ( score > max){
+      max = score
+    }
+    count = count + 1
+    }
+    console.log(max)
+</script>
+<script type="x" id="ch0105/06">
+  var n = Number(prompt())
+  var max = 0
+  var count = 0
+  while (count < n ){
+    var score = Number(prompt())
+    if ( score < max ){
+      max = score
+    }
+    count = count + 1
+  }
+  console.log( max )
+</script>
+<script id="ch0105/07">
+  var n = Number(prompt())
+  var count = 0
 </script>
