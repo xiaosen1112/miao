@@ -652,17 +652,222 @@ console.log(average.toFixed(2))
   }
   console.log(Math.trunc(M))
 </script>
-<script id="ch0105/16">
-  var N = Number(prompt())
-  var K = Number(prompt())
-  var price = 200
-  var year = 20
-  var count = 0
-  for(var i = 1; i <= year;i = i + 1) {
-    N = N + price * K            
-    if(N > price + price * K) {
-
+<script type="x" id="ch0105/16">
+  var salary = Number(prompt())
+  var k = Number(prompt())
+  var p = 1 + K / 100
+  var totalSalary = 0
+  var housePrice = 200
+  var buyed = false
+  for (var i = 1; i <= 20; i++) {
+    totalSalary += salary
+    if (totalSalary >= housePrice) {
+      buyed = true
+      console.log(i)
+      break
+    }
+    housePrice = housePrice * p
+  }
+  if (!buyed) {
+    console.log('Impossible')
+  }
+</script>
+<script type="x" id="ch0105/17">
+  var n = Number(prompt())
+  var result = (1 / Math.sqrt(5)) * (((1 + Math.sqrt(5)) / 2) ** n - ((1 - Math.sqrt(5)) / 2) ** n )
+console.log(Math.trunc(result))
+</script>
+<script type="x" id="ch0105/18">
+  var n = Number(prompt())
+  var basetotal = Number(prompt())
+  var baseeffect = Number(prompt())
+  var d = baseeffect / basetotal * 100
+  for (var i = 1; i <  n; i = i + 1) {
+    var x = Number(prompt())
+    var y = Number(prompt())
+    var radio = y / x * 100
+    if ( radio - d >5 ) {
+      console.log('better')
+    }else if ( d - radio > 5 ) {
+      console.log('worse')
+    }else
+    console.log('same')
+  }
+</script>
+<script type="x" id="ch0105/19">
+  var n = Number(prompt())
+  var totaltime = 0
+  for (var i = 0 ; i < n ; i = i + 1) {
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var r = Number(prompt())
+  var distance = Math.sqrt( a * a + b * b)
+  var time = distance / 50 * 2 + r * 1.5
+  totaltime = time
+  }
+  console.log(Math.ceil(totaltime))
+</script>
+<script type="x" id="ch0105/20">
+  var h = Number(prompt())
+var total = 0
+for (var i = 0; i < 10 ; i++) {
+  total += h
+  h = h / 2
+  total += h
+}
+console.log(total - h,h)
+</script>
+<script type="x" id="ch0105/21">
+  var number = Number(prompt())
+while (number !== 1) {
+  if (number % 2 == 1) {
+    var next = number * 3 + 1
+    var str = number + '*3+1=' + next
+  } else if (number % 2 == 0) {
+    var next = number / 2
+    var str = number + '/2=' + next
+  }
+  console.log(str)
+  number = next
+}
+console.log('End')
+</script>
+<script type="x" id="ch0105/22">
+  var havemoney = 0
+  var savemoney = 0
+  var inadequate = false
+  for (var i = 1; i <= 12; i++) {
+    havemoney += 300
+    var budget = Number(prompt())
+    if (havemoney < budget) {
+      console.log(-i)
+      inadequate = true
+    } else {
+      havemoney -= budget
+      var savedmoney = havemoney - havemoney % 100
+      havemoney -= savedmoney
+      savemoney += savedmoney
     }
   }
-  console.log(price + price * k / N)
+  if (!inadequate) {
+    console.log(havemoney + savemoney * 1.2)
+  }
+</script>
+<script type="x" id="ch0105/23">
+  var m = Number(prompt())
+  var n = Number(prompt())
+  var count = 0
+  for ( var i = 0 ; i < n ; i++ ) {
+    var took = Number(prompt())
+    if (m >= took ) {
+      m -= took
+    } else if( took > m) {
+      count = count + 1
+    }
+  }
+  console.log(count)
+</script>
+<script type="x" id="ch0105/24">
+var n = Number(prompt())
+var higer= 0
+var total = 0
+for (var i = 0; i < n; i++) {
+  var high = Number(prompt())
+  var low = Number(prompt())
+  var 正常 = false
+  if (high >= 90 && high <= 140 && low >= 60 && low <= 90) {
+    正常 = true
+  }
+  if (!正常) {
+    total = 0
+  } else {
+    total++
+    if (total > higer) {
+      higer = total
+    }
+  }
+}
+console.log(higer)
+</script>
+<script type="x" id="ch0105/25">
+  // 81到342之间的数转换成7进制与9进制才都是3位数
+  for (var x = 81; x <= 342; x++) {
+    var a7 = x % 7 // 7进制个位数
+    var b7 = (x - a7) / 7 % 7 // 7进制右数第二位数
+    var c7 = (x - a7 - b7 * 7) / 7 / 7 % 7 // 7进制右数第三位数
+    var a9 = x % 9 // 9进制个位数
+    var b9 = (x - a9) / 9 % 9 // 9进制右数第二位数
+    var c9 = (x - a9 - b9 * 9) / 9 / 9 % 9 // 9进制右数第三位数
+    if (a7 == c9 && a9 == c7 && b7 == b9) {
+      console.log(x)
+      console.log('' + c7 + b7 + a7)
+      console.log('' + c9 + b9 + a9)
+      break
+    }
+  }
+</script>
+<script type="x" id="ch0105/26">
+  var n = Number(prompt())
+  count = 0
+  for (var i = 0 ; i < n ; i++) {
+    var d = Number(prompt())
+    var a = d % 10
+    var b = (d - a ) / 10 % 10
+    var c = (d - a - b * 10) / 10 / 10 % 10
+    var e = (d - a - b * 10 - c * 100) / 10 / 10 / 10 % 10
+    if (a - b - c - e > 0)
+      count = count + 1
+  }
+  console.log(count)
+</script>
+<script type="x" id="ch0105/27">
+  var n = Number(prompt())
+  var sum  = 0
+  for (var i = 1; i <= 15; i++ ) {
+    sum += 1 / i
+    if (sum > n) {
+      break
+    }
+  }
+  console.log(i)
+</script>
+<script type="x" id="ch0105/28">
+  var n = Number(prompt())
+  do {
+    var d = n % 10
+    n = n - d
+    n = n / 10
+    console.log(d)
+  } while (n > 0)
+</script>
+<script type="x" id="ch0105/29">
+  var n = Number(prompt())
+  do {
+    var d = n % 10
+    n = n - d
+    n = n / 10
+    console.log(d)
+  } while (n > 0)
+  do {
+    var d = n % 10
+    n = n - d
+    n = n /10
+    console.log(d)
+  } while (n < 0 )
+</script>
+<script type="x" id="ch0105/30">
+  var m = Number(prompt())
+  var k = Number(prompt())
+  count = 0
+  while (m > 0 ) {
+    var d = m % 10
+    if (d == 3) {
+      count = count + 1
+    }
+    m = (m - d) / 10
+  }
+  if (count == k && m % 19 == 0) {
+    console.log('YES')
+  } else
+  console.log('NO')
 </script>
