@@ -710,7 +710,7 @@ console.log(Math.trunc(result))
 <script type="x" id="ch0105/20">
   var h = Number(prompt())
 var total = 0
-for (var i = 0; i < 10 ; i++) {
+for (var i = 0; i < 10; i++) {
   total += h
   h = h / 2
   total += h
@@ -842,18 +842,24 @@ console.log(higer)
 </script>
 <script type="x" id="ch0105/29">
   var n = Number(prompt())
+  var sign = 1
+  if (n < 0)
+    n = -n
+    sign = -1
+  }
+  var str = ''
   do {
     var d = n % 10
+    str = str + d
     n = n - d
     n = n / 10
-    console.log(d)
   } while (n > 0)
-  do {
-    var d = n % 10
-    n = n - d
-    n = n /10
-    console.log(d)
-  } while (n < 0 )
+  str = parseInt(str, 10)  // '0038'
+  if (sign == 1) {
+    console.log(str)
+  } else {
+    console.log(-str)
+  }
 </script>
 <script type="x" id="ch0105/30">
   var m = Number(prompt())
@@ -924,7 +930,7 @@ console.log(sum.toFixed(4))
   for (var i = 1;i <= n;i++) {
     var factorial = 1
     for (var j = 1; j <= i; j++) {
-      factorial *= i
+      factorial *= j
     }
     sum += factorial
   }
@@ -951,7 +957,7 @@ console.log(sum.toFixed(4))
   }
   console.log(sum.toFixed(2))
 </script>
-<script id="ch0105/37">
+<script type="x" id="ch0105/37">
   var M = Number(prompt())
   var N = Number(prompt())
   var X = Number(prompr())
@@ -1016,4 +1022,88 @@ for (var i = 1; i <= n; i++) {
   }
 }
 console.log(count)
+</script>
+<script type="x" id="ch0105/41">
+  var start = Number(prompt())
+  var end = Number(prompt())
+  var count = 0
+  for (var i = start; i <= end; i++) {
+    var x = i
+    while(x > 0) {
+      var d = x % 10
+      if (d == 2) {
+        count++
+      }
+      x = (x - d) / 10
+    }
+  }
+  console.log(count)
+</script>
+<script type="x" id="ch0105/42">
+  var h = Number(prompt())
+  var w = Number(prompt())
+  var char = prompt()
+  var fill = Number(prompt())
+  var edgeLine = char
+  var midLine = char
+  for (var i = 1; i < w - 1; i++) {
+    edgeLine += char
+    if (fill) {
+      midLine += char
+    } else {
+      midLine += ' '
+    }
+  }
+  edgeLine += char
+  midLine += char
+  var result = edgeLine + '\n'
+  for (var j = 1; j < h - 1; j++) {
+    result += midLine + '\n'
+  }
+  result += edgeLine
+  console.log(result)
+</script>
+<script type="x" id="ch0105/43">
+  var n = Number(prompt())
+  for (var i = 2; i < n; i++) {
+    if (n % i == 0) {
+      console.log(n / i)
+      break
+    }
+  }
+</script>
+<script type="x" id="ch0105/44">
+  var n = Number(prompt())
+var count = 0
+for (var i = 2; ; i++) {
+  var i是素数 = true
+  for (var j = 2; j < i; j++) {
+    if (i % j == 0) {
+      i是素数 = false
+      break
+    }
+  }
+  if (i是素数) {
+    count++
+    if (count == n) {
+      console.log(i)
+      break
+    }
+  }
+}
+</script>
+<script type="x" id="ch0105/45">
+    var n = Number(prompt())
+var sum = 0
+var coins = 1
+var days = 0
+for (var i = 1; i <= n; i++) {
+  sum += coins
+  days++
+  if (days === coins) {
+    coins++
+    days = 0
+  }
+}
+console.log(sum)
 </script>
