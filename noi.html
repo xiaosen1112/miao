@@ -871,3 +871,149 @@ console.log(higer)
   } else
   console.log('NO')
 </script>
+<script type="x" id="ch0105/31">
+  var n = Number(prompt())
+  var m = Number(prompt())
+  var result = ''
+  var 是否遇到了第一个关着的灯 = false
+  for (var i = 1; i <= n; i++) {
+    var open = true
+    for (var j = 1; j <= m && j <= i; j++) {
+      if (i % j == 0) {
+        open = !open
+      }
+    }
+    if (!open) {
+      if (!是否遇到了第一个关着的灯) {
+        是否遇到了第一个关着的灯 = true
+        result += (i)
+      } else {
+        result += (',' + i)
+      }
+    }
+  }
+  console.log(result)
+</script>
+<script type="x" id="ch0105/32">
+  var n = Number(prompt())
+  var p1 = 1
+  var q1 = 2
+  var sum = 0
+  for (var i = 0;i < n; i++) {
+    sum += q1 / p1
+    q1 = q1 + p1
+    p1 = q1 - p1
+  }
+  console.log(sum.toFixed(4))
+</script>
+<script type="x" id="ch0105/33">
+  var n = Number(prompt())
+  var sum = 0
+  for (var i = 1 ;i <= n; i++) {
+    if (i % 2 == 1) {
+      sum += 1 / i
+    } else {
+    sum -= 1 / i
+  }
+}
+console.log(sum.toFixed(4))
+</script>
+<script type="x" id="ch0105/34">
+  var n = Number(prompt())
+  var sum = 0
+  for (var i = 1;i <= n;i++) {
+    var factorial = 1
+    for (var j = 1; j <= i; j++) {
+      factorial *= i
+    }
+    sum += factorial
+  }
+  console.log(sum)
+</script>
+<script type="x" id="ch0105/35">
+  var n = Number(prompt())
+  var sum = 1
+  var factorial = 1
+  for (var i = 1;i <= n;i++) {
+    factorial *= i
+    sum += 1 / factorial
+  }
+  console.log(sum.toFixed(10))
+</script>
+<script type="x" id="ch0105/36">
+  var x = Number(prompt())
+  var n = Number(prompt())
+  var sum = 0
+  var p = 1
+  for (var i = 0; i <= n; i++) {
+    sum += p
+    p = p * x
+  }
+  console.log(sum.toFixed(2))
+</script>
+<script id="ch0105/37">
+  var M = Number(prompt())
+  var N = Number(prompt())
+  var X = Number(prompr())
+  var sum = 0
+  for (var i = 0;i <= M; i++) {
+    N = sum + 1
+  }
+  console.log(N)
+</script>
+<script type="x" id="ch0105/38">
+  var n = Number(prompt())
+  for (var i = 1; i <= n; i++) {
+    var m = Number(prompt())
+    var M = m
+    if (m == 0) {
+      var c = Number(prompt())
+      console.log(0)
+    } else {
+      for (var j = 0; j <= M; j++) {
+        var c = Number(prompt())
+        if (j !== M) {
+          console.log(c * m)
+        }
+        m--
+      }
+    }
+  }
+</script>
+<script type="x" id="ch0105/39">
+var n  = Number(prompt())
+var sum = 0
+for (var i = 0;i < n; i++) {
+  if (i % 7 !== 0) {
+    var nohaveseven = false
+    var j = i
+    while (j > 0) {
+      var d = j % 10
+      if (d == 7){
+        nohaveseven = true
+        break
+      }
+      j = (j - d) / 10
+    }
+    if (!nohaveseven) {
+      sum += i * i
+  }
+  }
+}
+console.log(sum)
+</script>
+<script type="x" id="ch0105/40">
+  var n = Number(prompt())
+var count = 0
+for (var i = 1; i <= n; i++) {
+  var x = i
+  while(x > 0) {
+    var d = x % 10
+    if (d == 1) {
+      count++
+    }
+    x = (x - d) / 10
+  }
+}
+console.log(count)
+</script>
