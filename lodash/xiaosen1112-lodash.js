@@ -32,7 +32,7 @@ var xiaosen1112 = {
   },
 
   difference: function difference(array, values) {
-    
+
   },
 
 
@@ -65,4 +65,4 @@ var xiaosen1112 = {
 
 
 
-}()
+}
