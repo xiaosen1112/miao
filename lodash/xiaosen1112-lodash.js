@@ -38,7 +38,7 @@ var xiaosen1112 = {
 
   fill: function fill(array, value, start = 0, end = array.length) {
     for (var i = start; i < end; i++) {
-      value = array[i]
+      array[i] = value
     }
     return array
   },
